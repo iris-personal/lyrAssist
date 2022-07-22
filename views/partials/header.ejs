@@ -9,12 +9,14 @@
 </head>
 <body>
   <nav>
-    <a href="/lyrAssist/home" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
-    <a href="/lyrAssist/profile" <%- title === 'Profile' ? 'class="active"' : '' %>>PROFILE</a>
     <% if (user) { %>
+        <a href="/lyrAssist/profile" <%- title === 'Profile' ? 'class="active"' : '' %>>PROFILE</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a href="/lyrAssist/songstream" <%- title === 'Song Stream' ? 'class="active"' : '' %>>SONG STREAM</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/lyrAssist/songlibrary" <%- title === 'Song Library' ? 'class="active"' : '' %>>SONG LIBRARY</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="/logout">LOG OUT</a>
     <% } else { %>
-          <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+        <a href="/lyrAssist/home" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
+          <a href="/auth/google" class="login">LOG IN&nbsp;</a>
     <% } %>
   </nav>
   <main>

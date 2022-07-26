@@ -4,7 +4,8 @@ const Post = require('../models/post');
 module.exports = {
     create,
     index,
-    new: newPost
+    new: newPost, 
+    show
 };
 
 function create(req, res) {
@@ -12,8 +13,8 @@ function create(req, res) {
     // Assign the logged in user's id
     post.user = req.user._id;
     post.save(function(err) {
-      if (err) return res.redirect('/posts');
-      res.redirect(`/posts/${post._id}`);
+      if (err) return res.redirect('/posts/index');
+      res.redirect(`/posts/index`);
     });
 }
 
@@ -26,3 +27,10 @@ function index(req,res) {
 function newPost(req, res) {
     res.render('posts/index', { title: 'New Post' });
 }
+
+function show(req, res) {
+    Post.findById(req.params.id) 
+        .exec(function (err, post) {
+            res.render('posts/show', { title: 'Post Details', post });
+        });
+  }

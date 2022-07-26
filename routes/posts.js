@@ -4,6 +4,7 @@ const postsCtrl = require('../controllers/posts');
 const isLoggedIn = require('../config/auth');
 
 router.get('/', isLoggedIn, postsCtrl.index);
-router.post('/:id', isLoggedIn, postsCtrl.create);
+router.post('/', isLoggedIn, postsCtrl.create);
+router.get('/:id', isLoggedIn, postsCtrl.show);
 
 module.exports = router;

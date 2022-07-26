@@ -1,0 +1,47 @@
+<%- include('../partials/header') %>
+
+<section id="post">
+    <% post.forEach(function(p) { %>
+        <div><%= p.userAvatar %><%= p.userName %></div>
+        <br><br>
+        <div><%= p.content %></div>
+      <% }); %>
+</section>
+
+<br><br><h2>Comments</h2>
+<% if (user) { %>
+  <form id="add-comment-form" method="POST"
+  action="/posts/<%= post._id %>/comments">
+  <label>New Comment:</label>
+  <textarea name="content"></textarea>
+    <input type="submit" value="Add Comment">
+  </form>
+<% }%>
+
+<table>
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Date</th>
+        <th>Comment</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% post.comments.forEach(function(c) { %>
+        <tr>
+          <td class="comment-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></td>
+          <td><%= c.createdAt.toLocaleDateString() %></td>
+          <td><%= c.content %></td>
+          <td>
+            <% if (user && user._id.equals(c.user)) { %>
+              <form action="/reviews/<%= c._id %>?_method=DELETE" method="POST">
+                <button type="submit">X</button>
+              </form>
+            <% } %>
+          </td>
+        </tr>
+      <% }); %>
+
+
+<%- include('../partials/footer') %>

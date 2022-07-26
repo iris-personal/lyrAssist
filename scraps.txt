@@ -1,0 +1,7 @@
+<!-- <form id="song-stream-posts" action="/posts/<%= post._id %>" method="POST">
+    <label>New Post:</label>
+    <textarea name="content"></textarea>
+    <button type="submit">Post</button>
+</form> -->
+
+<!-- <a href="/songlibrary" <%- title === 'Song Library' ? 'class="active"' : '' %>>SONG LIBRARY</a>&nbsp;&nbsp;&nbsp;&nbsp; -->

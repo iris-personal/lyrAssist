@@ -10,9 +10,8 @@
 <body>
   <nav>
     <% if (user) { %>
-        <a href="/${user._id}/profile" <%- title === 'Profile' ? 'class="active"' : '' %>>PROFILE</a>&nbsp;&nbsp;&nbsp;&nbsp; 
-        <a href="/songstream" <%- title === 'Song Stream' ? 'class="active"' : '' %>>SONG STREAM</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="/songlibrary" <%- title === 'Song Library' ? 'class="active"' : '' %>>SONG LIBRARY</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/lyrAssist/${user._id}/profile" <%- title === 'Profile' ? 'class="active"' : '' %>>PROFILE</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a href="/posts" <%- title === 'Song Stream' ? 'class="active"' : '' %>>SONG STREAM</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="/logout">LOG OUT</a>
     <% } else { %>
         <a href="/home" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;

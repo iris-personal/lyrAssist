@@ -12,8 +12,8 @@ const userSchema = new Schema({
     aboutMe: String,
     musicalStyle: String,
     location: String
-  }, {
+}, {
     timestamps: true
-  });
+});
 
 module.exports = mongoose.model('User', userSchema);

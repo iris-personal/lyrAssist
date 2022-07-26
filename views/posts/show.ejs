@@ -5,7 +5,7 @@
         <div><%= p.userAvatar %><%= p.userName %></div>
         <br><br>
         <div><%= p.content %></div>
-      <% }); %>
+    <% }); %>
 </section>
 
 <br><br><h2>Comments</h2>
@@ -30,7 +30,7 @@
     <tbody>
       <% post.comments.forEach(function(c) { %>
         <tr>
-          <td class="comment-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></td>
+          <td class="comment-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></td>
           <td><%= c.createdAt.toLocaleDateString() %></td>
           <td><%= c.content %></td>
           <td>

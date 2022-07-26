@@ -8,7 +8,10 @@ const userSchema = new Schema({
       required: true
     },
     email: String,
-    avatar: String
+    avatar: String,
+    aboutMe: String,
+    musicalStyle: String,
+    location: String
   }, {
     timestamps: true
   });

@@ -19,13 +19,13 @@ router.get('/oauth2callback', passport.authenticate(
   'google',
   {
     successRedirect: '/',
-    failureRedirect: '/lyrAssist/home'
+    failureRedirect: '/home'
   }
 ));
 
 router.get('/logout', function(req, res){
   req.logout(function() {
-    res.redirect('/lyrAssist/home');
+    res.redirect('/home');
   });
 });
 

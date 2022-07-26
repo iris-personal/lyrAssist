@@ -13,6 +13,7 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const profilesRouter = require('./routes/profiles');
 
 var app = express();
 

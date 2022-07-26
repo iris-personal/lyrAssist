@@ -6,5 +6,7 @@ module.exports = {
 };
 
 function show(req,res) {
-    res.render(`${user._id}/profile`);
+    Profile.find({}, function(err, user) {
+        res.render('profiles/show', { title: 'Your Profile', user });
+    });
 }

@@ -19,10 +19,10 @@ function create(req, res) {
 
 function index(req,res) {
     Post.find({}, function(err, posts) {
-        res.render('posts', { title: 'Song Streams', posts });
+        res.render('posts/index', { title: 'Song Streams', posts });
     });
 }
 
 function newPost(req, res) {
-    res.render('posts', { title: 'New Post' });
+    res.render('posts/index', { title: 'New Post' });
 }

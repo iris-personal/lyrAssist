@@ -4,8 +4,6 @@ const Schema = mongoose.Schema;
 const commentSchema = new Schema({
     content: {type: String, required: true},
     user: {type: Schema.Types.ObjectId, ref: 'User', required: true},
-    userName: String,
-    userAvatar: String
 }, {
     timestamps: true
 });
@@ -13,8 +11,6 @@ const commentSchema = new Schema({
 const postSchema = new Schema({
     content: {type: String, required: true},
     user: {type: Schema.Types.ObjectId, ref: 'User', required: true},
-    userName: String,
-    userAvatar: String,
     comments: [commentSchema]
 }, {
     timestamps: true

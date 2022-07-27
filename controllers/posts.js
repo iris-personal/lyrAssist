@@ -1,11 +1,14 @@
 const Post = require('../models/post');
+const User = require('../models/user');
 
 
 module.exports = {
     create,
     index,
     new: newPost, 
-    show
+    show,
+    edit,
+    update
 };
 
 function create(req, res) {
@@ -33,4 +36,23 @@ function show(req, res) {
         .exec(function (err, post) {
             res.render('posts/show', { title: 'Post Details', post });
         });
-  }
+}
+
+function edit(req, res) {
+    Post.findOne({_id: req.params.id, user: req.user._id}, function(err, post) {
+      if (err || !post) return res.redirect('/posts');
+      res.render('posts/edit', {post});
+    });
+}
+
+function update(req, res) {
+    Post.findOneAndUpdate(
+        {_id: req.params.id, user: req.user._id},
+        req.body,
+        {new: true},
+        function(err, post) {
+          if (err || !post) return res.redirect('/posts');
+          res.redirect(`/posts/${post._id}`);
+        }
+      );
+}

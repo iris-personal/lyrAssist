@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
   <title>LyrAssist</title>
 </head>
 <body>
-  <nav>
+  <nav class="navbar">
     <% if (user) { %>
         <a href="/profiles/${user._id}" <%- title === 'Profile' ? 'class="active"' : '' %>>PROFILE</a>&nbsp;&nbsp;&nbsp;&nbsp; 
         <a href="/posts" <%- title === 'Song Stream' ? 'class="active"' : '' %>>SONG STREAM</a>&nbsp;&nbsp;&nbsp;&nbsp;

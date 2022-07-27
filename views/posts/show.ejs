@@ -2,7 +2,7 @@
 
 <section id="post">
     <% post.forEach(function(p) { %>
-        <div><%= p.userAvatar %><%= p.userName %></div>
+        <div><%= p.user %>
         <br><br>
         <div><%= p.content %></div>
     <% }); %>
@@ -35,7 +35,8 @@
           <td><%= c.content %></td>
           <td>
             <% if (user && user._id.equals(c.user)) { %>
-              <form action="/reviews/<%= c._id %>?_method=DELETE" method="POST">
+              <a href="/posts/edit">Update Post</a>
+              <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
                 <button type="submit">X</button>
               </form>
             <% } %>

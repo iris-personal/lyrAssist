@@ -4,7 +4,7 @@ const commentsCtrl = require('../controllers/comments');
 const isLoggedIn = require('../config/auth');
 
 
-router.post('/posts/:id/comments', isLoggedIn, commentsCtrl.create);
+router.post('/:id/comments', isLoggedIn, commentsCtrl.create);
 router.delete('/comments/:id', isLoggedIn, commentsCtrl.delete);
 
 module.exports = router;

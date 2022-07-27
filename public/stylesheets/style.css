@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  justify-content: center;
 }
 
 a {
@@ -24,4 +25,29 @@ nav {
   align-items: center;
   background-color: black;
   height: 10vmin;
+}
+
+#post {
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: black;
+  color: #fff;
+}
+
+.navbar > a {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 5vmin;
+  color: #fff;
+}
+ 
+#newPost {
+  border: black .25vmin;
+  padding: 10vmin;
+  justify-content: center;
 }

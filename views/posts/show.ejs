@@ -1,11 +1,10 @@
 <%- include('../partials/header') %>
 
 <section id="post">
-    <% post.forEach(function(p) { %>
-        <div><%= p.user %>
-        <br><br>
-        <div><%= p.content %></div>
-    <% }); %>
+  <div><%= post.user %>
+  <br><br>
+  <div><%= post.content %></div>
+  <a href="/posts/edit">Update Post</a>
 </section>
 
 <br><br><h2>Comments</h2>
@@ -35,7 +34,6 @@
           <td><%= c.content %></td>
           <td>
             <% if (user && user._id.equals(c.user)) { %>
-              <a href="/posts/edit">Update Post</a>
               <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
                 <button type="submit">X</button>
               </form>

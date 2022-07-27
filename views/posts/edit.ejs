@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<% if (user && user._id.equals(post.user)) { %>
+
     <form id="editPost" action="/posts/<%= post._id %>?_method=PUT" method="POST">
         <label>Update Post:</label>
         <textarea name="content"></textarea>
@@ -10,7 +10,7 @@
     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete Post</button>
     </form>
-<% } %>
+
 
 
 

@@ -20,15 +20,14 @@ function create(req, res) {
 }
 
 function update(req, res) {
-  Post.comments.findOneAndUpdate(
-      {_id: req.params.id, user: req.user._id},
-      req.body,
-      {new: true},
-      function(err, comment) {
-        if (err || !comment) return res.redirect('/posts');
-        res.redirect(`/posts/${post._id}`);
-      }
-    );
+  Post.findById(req.params.id, function(err, post) {
+    post.comments.pop();
+    post.comments.push(req.body);
+    post.save(function(err) {
+      console.log(post);
+      res.redirect(`/posts/${post._id}`);
+    });
+  });
 }
 
 async function deleteComment(req, res, next) {

@@ -63,13 +63,10 @@ function update(req, res) {
       );
 }
 
-async function deletePost(req, res, next) {
-    try{
-      const post = await Post.findById(req.params.id);
-      post.remove(req.params.id);
-      await post.save();
-      res.redirect(`/posts`);
-    } catch(err) {
-      return next(err);
-    } 
-}
+function deletePost(req, res) {
+    Post.findOneAndDelete(
+      {_id: req.params.id, userRecommending: req.user._id}, function(err) {
+        res.redirect('/posts');
+      }
+    );
+  }

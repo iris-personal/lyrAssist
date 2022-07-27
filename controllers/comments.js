@@ -4,6 +4,7 @@ const User = require('../models/user');
 module.exports = {
   create,
   delete: deleteComment,
+  update
 };
 
 function create(req, res) {
@@ -16,6 +17,18 @@ function create(req, res) {
       res.redirect(`/posts/${post._id}`);
     });
   });
+}
+
+function update(req, res) {
+  Post.comments.findOneAndUpdate(
+      {_id: req.params.id, user: req.user._id},
+      req.body,
+      {new: true},
+      function(err, comment) {
+        if (err || !comment) return res.redirect('/posts');
+        res.redirect(`/posts/${post._id}`);
+      }
+    );
 }
 
 async function deleteComment(req, res, next) {

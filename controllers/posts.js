@@ -8,7 +8,8 @@ module.exports = {
     new: newPost, 
     show,
     edit,
-    update
+    update,
+    delete: deletePost
 };
 
 function create(req, res) {
@@ -42,9 +43,11 @@ function show(req, res) {
 }
 
 function edit(req, res) {
-    Post.findOne({_id: req.params.id, user: req.user._id}, function(err, post) {
+    Post.findById(req.params.id)
+    .populate('user') 
+    .exec(function(err, post) {
       if (err || !post) return res.redirect('/posts');
-      res.render('posts/edit', {post});
+      res.render('posts/edit', {title: 'Edit Post', post});
     });
 }
 
@@ -58,4 +61,15 @@ function update(req, res) {
           res.redirect(`/posts/${post._id}`);
         }
       );
+}
+
+async function deletePost(req, res, next) {
+    try{
+      const post = await Post.findById(req.params.id);
+      post.remove(req.params.id);
+      await post.save();
+      res.redirect(`/posts`);
+    } catch(err) {
+      return next(err);
+    } 
 }

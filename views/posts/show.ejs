@@ -4,13 +4,13 @@
   <div><%= post.user.name %><img alt="avatar" src="<%= post.user.avatar %>" referrerpolicy="no-referrer" >
   <br><br>
   <div><%= post.content %></div>
-  <a href="/posts/edit">Update Post</a>
+  <a href="/posts/<%= post._id %>/edit">Update Post</a>
 </section>
 
 <br><br><h2>Comments</h2>
 <% if (user) { %>
   <form id="add-comment-form" method="POST"
-  action="/posts/<%= post._id %>/comments">
+  action="/comments/<%= post._id %>">
   <label>New Comment:</label>
   <textarea name="content"></textarea>
     <input type="submit" value="Add Comment">
@@ -29,11 +29,17 @@
     <tbody>
       <% post.comments.forEach(function(c) { %>
         <tr>
-          <td class="comment-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></td>
+          <td class="comment-user"><img alt="avatar" src="<%= post.user.avatar %>" referrerpolicy="no-referrer" ><%= post.user.name %></td>
           <td><%= c.createdAt.toLocaleDateString() %></td>
           <td><%= c.content %></td>
           <td>
             <% if (user && user._id.equals(c.user)) { %>
+              <form id="editComment" action="/posts/<%= post._id %>?_method=PUT" method="POST">
+                <label>Update Comment:</label>
+                <textarea name="content"></textarea>
+                <br>
+                <button type="submit">Update Comment</button>
+              </form>
               <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
                 <button type="submit">X</button>
               </form>

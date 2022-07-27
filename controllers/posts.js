@@ -22,8 +22,10 @@ function create(req, res) {
 }
 
 function index(req,res) {
-    Post.find({}, function(err, posts) {
-        res.render('posts/index', { title: 'Song Streams', posts });
+    Post.find({})
+        .populate('user')
+        .exec(function(err, posts) {
+            res.render('posts/index', { title: 'Song Streams', posts });
     });
 }
 
@@ -32,7 +34,8 @@ function newPost(req, res) {
 }
 
 function show(req, res) {
-    Post.findById(req.params.id) 
+    Post.findById(req.params.id)
+        .populate('user') 
         .exec(function (err, post) {
             res.render('posts/show', { title: 'Post Details', post });
         });

@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<form id="editPost" action="/posts" method="PUT">
+<form id="editPost" action="/posts/<%= post._id %>?_method=PUT" method="POST">
     <label>Update Post:</label>
     <textarea name="content"></textarea>
     <br>

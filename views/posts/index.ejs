@@ -9,7 +9,7 @@
 
 <section id="post">
       <% posts.forEach(function(p) { %>
-          <div><img alt="avatar" src="<%= p.avatar %>" referrerpolicy="no-referrer" ><%= p.name %></div>
+          <div><%= p.user.name %><img alt="avatar" src="<%= p.user.avatar %>" referrerpolicy="no-referrer" ></div>
           <br><br>
           <div><%= p.content %></div>
           <a href="/posts/<%= p._id %>">View Comments</a>

@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <section id="post">
-  <div><%= post.user %>
+  <div><%= post.user.name %><img alt="avatar" src="<%= post.user.avatar %>" referrerpolicy="no-referrer" >
   <br><br>
   <div><%= post.content %></div>
   <a href="/posts/edit">Update Post</a>
@@ -17,7 +17,7 @@
   </form>
 <% }%>
 
-<table>
+<br><br><table>
     <thead>
       <tr>
         <th>User</th>

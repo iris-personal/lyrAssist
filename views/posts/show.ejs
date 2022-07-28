@@ -4,7 +4,9 @@
   <div><%= post.user.name %><img alt="avatar" src="<%= post.user.avatar %>" referrerpolicy="no-referrer" >
   <br><br>
   <div><%= post.content %></div>
-  <a href="/posts/<%= post._id %>/edit">Update Post</a>
+  <% if (user && user._id.equals(post.user)) { %>
+    <a href="/posts/<%= post._id %>/edit">Update Post</a>
+  <% } %>  
 </section>
 
 <br><br><h2>Comments</h2>

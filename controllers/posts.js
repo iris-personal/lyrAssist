@@ -26,6 +26,7 @@ function index(req,res) {
     Post.find({})
         .populate('user')
         .exec(function(err, posts) {
+            posts.sort((a,b) => (b.createdAt) - (a.createdAt));
             res.render('posts/index', { title: 'Song Streams', posts });
     });
 }

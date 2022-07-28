@@ -19,30 +19,6 @@ function create(req, res) {
   });
 }
 
-// function update(req, res) {
-//   Post.findById(req.params.id, function(err, post) {
-//     post.comments.pop();
-//     post.comments.push(req.body);
-//     post.save(function(err) {
-//       console.log(post);
-//       res.redirect(`/posts/${post._id}`);
-//     });
-//   });
-// }
-
-// function update(req, res) {
-//   Post.findById(req.params.id)
-//   .populate('user')
-//   .exec(function(err, post) {
-//     const commentSubdoc = post.comments.id(req.params.id);
-//     if (!commentSubdoc.user.equals(req.user._id)) return res.redirect(`/posts/${post._id}`);
-//     commentSubdoc.content = req.body.content;
-//     post.save(function(err) {
-//       res.redirect(`/posts/${post._id}`);
-//     });
-//   });
-// }
-
 function update(req, res) {
   Post.findOne(
     {'comments._id': req.params.id},

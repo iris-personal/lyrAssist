@@ -13,7 +13,6 @@
 <body>
   <nav class="navbar">
     <% if (user) { %>
-        <a href="/profiles/${user._id}" <%- title === 'Profile' ? 'class="active"' : '' %>>PROFILE</a>&nbsp;&nbsp;&nbsp;&nbsp; 
         <a href="/posts" <%- title === 'Song Stream' ? 'class="active"' : '' %>>SONG STREAM</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="/logout">LOG OUT</a>
     <% } else { %>

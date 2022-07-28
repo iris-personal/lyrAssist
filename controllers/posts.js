@@ -17,8 +17,8 @@ function create(req, res) {
     // Assign the logged in user's id
     post.user = req.user._id;
     post.save(function(err) {
-      if (err) return res.redirect('/posts/index');
-      res.redirect(`/posts/index`);
+      if (err) return res.redirect('/posts');
+      res.redirect(`/posts`);
     });
 }
 

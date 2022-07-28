@@ -8,6 +8,9 @@ user centric logic for edit
 <!-- <% if (user && user._id.equals(post.user)) { %> -->
 <!-- <% } %> -->
 
+sort addition for posts and comments if possible
+            post.replies.sort((a,b) => (b.createdAt) - (a.createdAt));
+
 comments controller
 function update(req, res) {
   Post.comments.findOneAndUpdate(
@@ -20,3 +23,6 @@ function update(req, res) {
       }
     );
 }
+
+nav bar for profile
+        <a href="/profiles/${user._id}" <%- title === 'Profile' ? 'class="active"' : '' %>>PROFILE</a>&nbsp;&nbsp;&nbsp;&nbsp; 

@@ -36,7 +36,7 @@
             <% if (user && user._id.equals(c.user)) { %>
               <form id="editComment" action="/comments/<%= post._id %>/?_method=PUT" method="POST">
                 <label>Update Comment:</label>
-                <textarea name="content"></textarea>
+                <textarea name="content"><%= c.content %></textarea>
                 <br>
                 <button type="submit">Update Comment</button>
               </form>

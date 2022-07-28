@@ -3,7 +3,7 @@
 
     <form id="editPost" action="/posts/<%= post._id %>?_method=PUT" method="POST">
         <label>Update Post:</label>
-        <textarea name="content"></textarea>
+        <textarea name="content"><%= post.content %></textarea>
         <br>
         <button type="submit">Update Post</button>
     </form>

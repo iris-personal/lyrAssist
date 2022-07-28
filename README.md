@@ -48,12 +48,12 @@ Designed with song writing in mind,lyrAssist allows musicians of all specialties
 ### Built With
 
 * [Node.js](https://nodejs.org/)
-* [Express.js] (https://expressjs.com/)
+* [Express.js](https://expressjs.com/)
 * [Mongoose](https://mongoosejs.com/)
 * [MongoDB](https://mongodb.com/)
+* [Bootstrap](https://getbootstrap.com)
 * [CSS]
 * [HTML]
-* [Bootstrap](https://getbootstrap.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

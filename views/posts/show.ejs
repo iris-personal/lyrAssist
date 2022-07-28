@@ -1,23 +1,21 @@
 <%- include('../partials/header') %>
 
 <section id="post">
-  <div><%= post.user.name %><img alt="avatar" src="<%= post.user.avatar %>" referrerpolicy="no-referrer" >
+  <div class="user"><%= post.user.name %>&nbsp;&nbsp;<img alt="avatar" src="<%= post.user.avatar %>" referrerpolicy="no-referrer" ></div>
   <br><br>
-  <div><%= post.content %></div>
-  <% if (user && user._id.equals(post.user)) { %>
-    <a href="/posts/<%= post._id %>/edit">Update Post</a>
+  <div class="vpost"><%= post.content %></div>
+  <% if (user._id.equals(post.user._id)) { %>
+    <a href="/posts/<%= post._id %>/edit" class="update">Update Post</a>
   <% } %>  
 </section>
 
 <br><br><h2>Comments</h2>
-<% if (user) { %>
   <form id="add-comment-form" method="POST"
   action="/comments/<%= post._id %>">
   <label>New Comment:</label>
   <textarea name="content"></textarea>
-    <input type="submit" value="Add Comment">
+    <input class="add" type="submit" value="Add Comment">
   </form>
-<% }%>
 
 <br><br><table>
     <thead>
@@ -31,11 +29,11 @@
     <tbody>
       <% post.comments.forEach(function(c) { %>
         <tr>
-          <td class="comment-user"><img alt="avatar" src="<%= post.user.avatar %>" referrerpolicy="no-referrer" ><%= post.user.name %></td>
+          <td class="user"><%= post.user.name %>&nbsp;&nbsp;<img alt="avatar" src="<%= post.user.avatar %>" referrerpolicy="no-referrer" ></td>
           <td><%= c.createdAt.toLocaleDateString() %></td>
           <td><%= c.content %></td>
           <td>
-            <% if (user && user._id.equals(c.user)) { %>
+            <% if (user._id.equals(c.user)) { %>
               <form id="editComment" action="/comments/<%= c._id %>/?_method=PUT" method="POST">
                 <label>Update Comment:</label>
                 <textarea name="content"><%= c.content %></textarea>

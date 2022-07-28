@@ -7,16 +7,13 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
-  <title>LyrAssist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <title>lyrAssist</title>
+  <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
 </head>
 <body>
   <nav class="navbar">
-    <% if (user) { %>
         <a href="/posts" <%- title === 'Song Stream' ? 'class="active"' : '' %>>SONG STREAM</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="/logout">LOG OUT</a>
-    <% } else { %>
-        <a href="/auth/google" class="login">LOG IN&nbsp;</a>
-    <% } %>
   </nav>
   <main>

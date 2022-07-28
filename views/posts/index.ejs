@@ -3,16 +3,15 @@
 <form id="newPost" action="/posts" method="POST">
     <label>New Post:</label>
     <textarea name="content"></textarea>
-    <br>
     <button type="submit">Post</button>
 </form>
 
+
 <section id="post">
       <% posts.forEach(function(p) { %>
-          <div><%= p.user.name %><img alt="avatar" src="<%= p.user.avatar %>" referrerpolicy="no-referrer" ></div>
-          <br><br>
-          <div><%= p.content %></div>
-          <a href="/posts/<%= p._id %>">View Comments</a>
+          <div class="user"><%= p.user.name %>&nbsp;&nbsp;<img alt="avatar" src="<%= p.user.avatar %>" referrerpolicy="no-referrer" ></div>
+          <div class="vpost"><%= p.content %></div>
+          <a href="/posts/<%= p._id %>" class="vp">View Post</a>
         <% }); %>
 </section>
 

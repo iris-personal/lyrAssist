@@ -81,10 +81,10 @@ All you need is an account with Google. Simply hit the sign in button, log in wi
 <!-- ICEBOX -->
 ## Ice Box
 
-- [ ] Add private messaging
-- [ ] Add a save feature on posts/songs
-- [ ] Add editable profile page
-- [ ] Add a connect feature that links to a user's SoundCloud account
+- Add private messaging
+- Add a save feature on posts/songs
+- Add editable profile page
+- Add a connect feature that links to a user's SoundCloud account
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

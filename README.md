@@ -38,7 +38,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img align="center" src="https://i.imgur.com/oN4QO9V.png" alt="Logo">
+![Landing Page](https://i.imgur.com/fQwqyD8.png)
 
 Designed with song writing in mind, lyrAssist allows musicians of all specialties to collaborate together to make your own unique songs. For example, you are a great lyracist, but you struggle with adding instrumentals to your melody. LyrAssist allows you to post your lyrics, and hear feedback from others who are awesome instrumentalists. With lyrAssist, your songwriting skills will never be in question.
 
@@ -74,7 +74,6 @@ All you need is an account with Google. Simply hit the sign in button, log in wi
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-![Landing Page](https://i.imgur.com/fQwqyD8.png)
 ![Song Stream](https://i.imgur.com/TGgjnwo.png)
 ![View Post Page](https://i.imgur.com/chViH4H.png)
 ![Update Page](https://i.imgur.com/7x62dOH.png)

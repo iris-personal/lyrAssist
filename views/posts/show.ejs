@@ -28,9 +28,9 @@
         <% post.comments.forEach(function(c) { %>
           <div class="comments">
             <div class="user">
-              <img class="showAvatar" alt="avatar" src="<%= post.user.avatar %>" referrerpolicy="no-referrer">
+              <img class="showAvatar" alt="avatar" src="<%= c.user.avatar %>" referrerpolicy="no-referrer">
               <span>
-                <%= post.user.name %>
+                <%= c.user.name %>
               </span>
             </div>
             <span class="commentContent">

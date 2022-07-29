@@ -1,31 +1,35 @@
 <%- include('../partials/header') %>
 
-<main>
-    <div class="allContent">
-        <div id="newPostFlex">
-            <form id="newPost" action="/posts" method="POST">
-                <label>New Post:</label>
-                <textarea name="content"></textarea>
-                <button type="submit">Post</button>
-            </form>
-        </div>
+    <main>
+        <div class="allContent">
+            <div id="newPostFlex">
+                <form id="newPost" action="/posts" method="POST">
+                    <label>New Post:</label>
+                    <textarea name="content"></textarea>
+                    <button type="submit">Post</button>
+                </form>
+            </div>
 
-        <section id="post">
-            <% posts.forEach(function(p) { %>
-                <div class="posts">
-                    <div class="user">
-                        <img alt="avatar" src="<%= p.user.avatar %>" referrerpolicy="no-referrer" >
-                        <br>
-                        <span><%= p.user.name %></span>
+            <section id="post">
+                <% posts.forEach(function(p) { %>
+                    <div class="posts">
+                        <div class="user">
+                            <img alt="avatar" src="<%= p.user.avatar %>" referrerpolicy="no-referrer">
+                            <br>
+                            <span>
+                                <%= p.user.name %>
+                            </span>
+                        </div>
+                        <!-- <div > -->
+                        <span class="postContent">
+                            <%= p.content %>
+                        </span>
+                        <!-- </div> -->
+                        <a href="/posts/<%= p._id %>" class="vpbtn">View Post</a>
                     </div>
-                    <!-- <div > -->
-                        <span class="postContent"><%= p.content %></span>
-                    <!-- </div> -->
-                    <a href="/posts/<%= p._id %>" class="vpbtn">View Post</a>
-                </div>
-            <% }); %>
-        </section>
-    </div>
-</main>
+                    <% }); %>
+            </section>
+        </div>
+    </main>
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>

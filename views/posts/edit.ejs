@@ -1,16 +1,16 @@
 <%- include('../partials/header') %>
 
-<main>
-    <form id="editPost" action="/posts/<%= post._id %>?_method=PUT" method="POST">
-        <label>Update Post:</label>
-        <textarea name="content"><%= post.content %></textarea>
-        <button type="submit">Update Post</button>
-    </form>
-    <form id="deletePost" action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete Post</button>
-    </form>
-</main>
+    <main>
+        <form id="editPost" action="/posts/<%= post._id %>?_method=PUT" method="POST">
+            <label>Update Post:</label>
+            <textarea name="content"><%= post.content %></textarea>
+            <button type="submit">Update Post</button>
+        </form>
+        <form id="deletePost" action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete Post</button>
+        </form>
+    </main>
 
 
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>

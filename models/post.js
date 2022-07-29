@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
-    content: {type: String, required: true},
-    user: {type: Schema.Types.ObjectId, ref: 'User', required: true},
+    content: { type: String, required: true },
+    user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
     name: String,
     avatar: String
 }, {
@@ -11,8 +11,8 @@ const commentSchema = new Schema({
 });
 
 const postSchema = new Schema({
-    content: {type: String, required: true},
-    user: {type: Schema.Types.ObjectId, ref: 'User', required: true},
+    content: { type: String, required: true },
+    user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
     comments: [commentSchema]
 }, {
     timestamps: true

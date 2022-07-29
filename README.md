@@ -13,6 +13,7 @@
 
   <p align="center">
     a musician's haven 
+    https://lyr-a-ssist.herokuapp.com/
   </p>
 </div>
 
@@ -36,7 +37,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Logo Shot](https://i.imgur.com/PvrOQ4N.png)
+![Logo Shot](https://i.imgur.com/oN4QO9V.png)
 
 Designed with song writing in mind,lyrAssist allows musicians of all specialties to collaborate together to make your own unique songs. For example, you are a create lyracist, but you struggle with adding instrumentals to your melody. LyrAssist allows you to post your lyrics, and hear feedback from others who are awesome instrumentalists. With lyrAssist, your songwriting skills will never be in question.
 
@@ -51,7 +52,6 @@ Designed with song writing in mind,lyrAssist allows musicians of all specialties
 * [Express.js](https://expressjs.com/)
 * [Mongoose](https://mongoosejs.com/)
 * [MongoDB](https://mongodb.com/)
-* [Bootstrap](https://getbootstrap.com)
 * [CSS]
 * [HTML]
 
@@ -73,6 +73,10 @@ All you need is an account with Google. Simply hit the sign in button, log in wi
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+![Landing Page](https://i.imgur.com/fQwqyD8.png)
+![Song Stream](https://i.imgur.com/TGgjnwo.png)
+![View Post Page](https://i.imgur.com/chViH4H.png)
+![Update Page](https://i.imgur.com/7x62dOH.png)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -95,7 +99,10 @@ All you need is an account with Google. Simply hit the sign in button, log in wi
 
 Iris Toland - mary.iris.toland@gmail.com
 
-Project Link: [https://github.com/iris-personal/lyrAssist](https://github.com/iris-personal/lyrAssist)
+GitHub Project Link: [https://github.com/iris-personal/lyrAssist](https://github.com/iris-personal/lyrAssist)
+
+Deployed Project Link: [https://lyr-a-ssist.herokuapp.com/](https://lyr-a-ssist.herokuapp.com/)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -106,6 +113,7 @@ Project Link: [https://github.com/iris-personal/lyrAssist](https://github.com/ir
 
 * Jim Clark - SEI Lead Instructor
 * Devlin Booth - SEI Instructional Assistant
+* Rebecca Preece - SEI Peer
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

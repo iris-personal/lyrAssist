@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/iris-personal/lyrAssist">
-    <img src="https://i.imgur.com/F4gYWol.png" alt="Logo" width="80" height="80">
+    <img src="https://i.imgur.com/FrkUbBQ.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">lyrAssist</h3>

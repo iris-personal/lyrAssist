@@ -38,6 +38,7 @@ function newPost(req, res) {
 function show(req, res) {
   Post.findById(req.params.id)
     .populate('user')
+    .populate('comments.user')
     .exec(function (err, post) {
       console.log(post);
       res.render('posts/show', { title: 'Post Details', post });

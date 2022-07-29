@@ -6,13 +6,14 @@
 <br />
 <div align="center">
   <a href="https://github.com/iris-personal/lyrAssist">
-    <img src="https://i.imgur.com/FrkUbBQ.png" alt="Logo" width="80" height="80">
+    <img src="https://i.imgur.com/FrkUbBQ.png" alt="favicon" width="80" height="80">
   </a>
 
   <h3 align="center">lyrAssist</h3>
 
   <p align="center">
-    a musician's haven 
+    a musician's haven
+    <br>
     https://lyr-a-ssist.herokuapp.com/
   </p>
 </div>
@@ -37,9 +38,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Logo Shot](https://i.imgur.com/oN4QO9V.png)
+<img aling="center"src="https://i.imgur.com/oN4QO9V.png" alt="Logo">
 
-Designed with song writing in mind,lyrAssist allows musicians of all specialties to collaborate together to make your own unique songs. For example, you are a create lyracist, but you struggle with adding instrumentals to your melody. LyrAssist allows you to post your lyrics, and hear feedback from others who are awesome instrumentalists. With lyrAssist, your songwriting skills will never be in question.
+Designed with song writing in mind, lyrAssist allows musicians of all specialties to collaborate together to make your own unique songs. For example, you are a great lyracist, but you struggle with adding instrumentals to your melody. LyrAssist allows you to post your lyrics, and hear feedback from others who are awesome instrumentalists. With lyrAssist, your songwriting skills will never be in question.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
